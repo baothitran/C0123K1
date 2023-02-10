@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    
+        <table>
+            <tbody>
+                <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+                </tr>
+                <tr>
+                    <td> <input type="text" id="Amount"></td>
+                    <td> <select name="" id="From" style="width: 150px;">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                    </td>
+                    <td>
+                        <select name="" id="To" style="width: 150px;">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                    </td>
+                    <td> <button onclick="changeMoney()" style="width: 100px;"> Convert</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p id="Result"></p>
+   
+
+    
+</body>
+</html>
+
+<script>
+    function changeMoney(){
+        let Amount = document.getElementById("Amount").value;
+        let FromC = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Result;
+        
+
+        if(FromC == "USD" && To == "VND"){
+            Result = "Result: " + (Amount * 23000) + " Đ";
+        }
+        else if (FromC == "VND" && To == "USD"){
+            Result = "Result: " + (Amount / 23000) + " $";
+        }
+        else if (FromC == "VND"){
+            Result = "Result: " + Amount + " Đ";
+        }
+        else {
+            Result = "Result: "+ Amount + " $";
+        }
+        document.getElementById('Result').innerHTML = Result
+    }
+</script>
