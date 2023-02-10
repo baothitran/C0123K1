@@ -20,20 +20,14 @@
             <td><button onclick="Tru()">Subtraction</button></td>
             <td><button onclick="Nhan()">Multiplication</button></td>
             <td><button onclick="Chia()">Division</button></td>
-               
-
-            
         
         </tr>
     </table>
         
     <br> 
-    <p>Kết quả là:</p>
-     <p id="Result"></p>
     
-    
-    
-
+    <p id="result">Kết quả là: 0</p>
+  
     
 </body>
 </html>
@@ -41,25 +35,29 @@
     function Cong() {
         let number1 = document.getElementById("n1").value
         let number2 = document.getElementById("n2").value
-        let Result = Number(number1) + Number(number2)
-        document.getElementById("Result").innerHTML = Result
+        let result = Number(number1) + Number(number2)
+        
+        document.getElementById("result").innerHTML = "Kết quả là: " + result
     }
     function Tru() {
         let number1 = document.getElementById("n1").value
         let number2 = document.getElementById("n2").value
-        let Result = Number(number1) - Number(number2)
-        document.getElementById("Result").innerHTML = Result
+        let result = Number(number1) - Number(number2)
+        
+        document.getElementById("result").innerHTML = "Kết quả là: " + result
     }
     function Nhan() {
         let number1 = document.getElementById("n1").value
         let number2 = document.getElementById("n2").value
-        let Result = Number(number1) * Number(number2)
-        document.getElementById("Result").innerHTML = Result
+        let result = Number(number1) * Number(number2)
+        
+        document.getElementById("result").innerHTML = "Kết quả là: " + result
     }
     function Chia() {
         let number1 = document.getElementById("n1").value
         let number2 = document.getElementById("n2").value
-        let Result = Number(number1) / Number(number2)
-        document.getElementById("Result").innerHTML = Result
+        let result = Number(number1) / Number(number2)
+        
+        document.getElementById("result").innerHTML = "Kết quả là: " + result
     }
 </script>
