@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnobita</title>
+</head>
+<body onload="letgo()">
+    <img id="husky" src="https://img.freepik.com/premium-vector/dog-sled-siberian-husky-breed-sitting-smiling_218319-192.jpg?w=740" style="position: absolute; left: 0; top: 0;" height="100" width="75" />   
+</body>
+
+<script>
+    function up() {
+    let element = document.getElementById("husky");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+}
+    function down() {
+    var element = document.getElementById("husky");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+}
+    function left() {
+    var element = document.getElementById("husky");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+}
+    function right() {
+    var element = document.getElementById("husky");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+}
+    
+    function runrun(abc){
+        switch (abc.keyCode) {
+            case 1:
+            left();
+        break;
+            case 2:
+            right();
+        break;
+            case 3:
+            up();
+        break;
+            case 4:
+            down();
+        break;
+        }
+    }
+    function letgo() {
+        window.addEventListener ('keydown' ,runrun);
+    }
+</script>
+
+</html>
