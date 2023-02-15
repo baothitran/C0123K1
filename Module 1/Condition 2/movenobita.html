@@ -7,45 +7,12 @@
     <title>Nobita</title>
 </head>
 <body onload="docReady()">
-    <img id="doremon" src="https://thuthuatnhanh.com/wp-content/uploads/2019/05/hinh-anh-doremon-tha-bong-bay.jpg" style="height: 100px; width: 200px;" alt="">
+    <img id="doremon" src="https://thuthuatnhanh.com/wp-content/uploads/2019/05/hinh-anh-doremon-tha-bong-bay.jpg" style="position:absolute; left:0; top:0;" height= 100px; width = 200px; alt="">
     
+    <script src="movenobita.js">
+        
+    </script>
     
 </body>
-<script>
-    function upArrow() {
-        let element = document.getElementById('doraemon')
-        element.style.top = parseInt(element.style.top) - 5 +'px'
-    }
-    function downArrow() {
-        let element = document.getElementById('doraemon')
-        element.style.top = parseInt(element.style.top) + 5 +'px'
-    }
-    function leftArrow() {
-        let element = document.getElementById('doraemon')
-        element.style.left = parseInt(element.style.top) - 5 +'px'
-    }
-    function rightArrow() {
-        let element = document.getElementById('doraemon')
-        element.style.left = parseInt(element.style.top) + 5 +'px'
-    }
-    function moveSelect(evt) {
-        switch (evt.keyCode) {
-            case 37:
-                leftArrow()
-                break
-            case 39:
-                rightArrow()
-                break
-            case 38:
-                upArrow()
-                break
-            case 40:
-                downArrow()
-                break
-        }
-    }
-    function docReady() {
-        window.addEventListener('keydown', moveSelect)
-    }
-</script>
+
 </html>
