@@ -7,8 +7,20 @@
     <title>Do you love me</title>
 </head>
 <body>
-    <h2>Do you love me?</h2>
-    <button id="yes" onclick="clickbtn" style="position: relative;">Yes</button>
-    <button id="no" onmouseover="nohover" style="position: relative;">No</button>
+    <h2 style="position: absolute; left: 220px; top: 175px">Do you love me?</h2>
+    <button id="yes" onclick="clickbtn()" style="position: absolute; left: 250px; top: 235px">Yes</button>
+    <button id="no" onmouseover="nohover()" style="position: absolute; left: 310px; top: 235px">No</button>
+    <script>
+        function clickbtn() {
+            alert("Me too <3")
+        }
+        function nohover() {
+            var x = Math.round(Math.random() * window.innerWidth)
+            var y = Math.round(Math.random() * window.innerHeight)
+            document.getElementById("no").style.left = x + "px"
+            document.getElementById("no").style.top = y + "px"
+        }
+
+    </script>
 </body>
 </html>
