@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="luong" placeholder="Nhập lương">
+    <button onclick="bacluong()">Kiểm tra</button>
+    <div id="result"></div>
+    <script>
+        function bacluong() {
+            let luong  = document.getElementById("luong").value;
+switch (true) {
+    case luong > 80: {
+        result = ("Bậc 7");
+        break;
+    }
+    case luong > 52: {
+        result = ("Bậc 6");
+        break;
+    }
+    case luong > 32: {
+        result = ("Bậc 5");
+        break;
+    }
+    case luong > 18: {
+        result = ("Bậc 4");
+        break;
+    }
+    case luong > 10: {
+        result = ("Bậc 3");
+        break;
+    }
+    case luong > 5: {
+        result = ("Bậc 2");
+        break;
+    }
+    case luong <= 5 && luong >= 0: {
+        result = ("Bậc 1");
+        break;
+    }
+    default:                {
+        result = ("Mời nhập lại");
+        break;
+    }  
+}  
+    document.getElementById("result").innerHTML = result ;
+}
+
+    </script>
+</body>
+</html>
