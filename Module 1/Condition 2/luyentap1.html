@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập</title>
+</head>
+<body>
+    <!-- Bài 1 -->
+    <!-- <h3>Kiểm tra a có chia hết cho b không</h3>
+    <input type="text" id="a1" placeholder="Nhập a"> <br> <br>
+    <input type="text" name="" id="b1" placeholder="Nhập b"> <br> <br>
+    <input type="button" value="Kiếm tra" onclick="kiemtra()">
+    <p id="result"></p>    
+
+    <script>
+        function kiemtra() {
+            let a = Number(document.getElementById("a1").value)
+        let b = Number(document.getElementById("b1").value)
+        let result
+
+        if (a%b == 0) {
+            result = "Kết quả: a chia hết cho b"
+        } else {
+            result = "Kết quả: a không chia hết cho b"
+        }
+        document.getElementById("result").innerHTML = result
+        }
+         -->
+        
+        
+         
+    <!-- </script> -->
+    <!-- Bài 2 -->
+    <!-- <h3>Xét điều kiện vào lớp 10</h3>
+    <input type="text" id="tuoi" placeholder="Nhập tuổi">
+    <br>
+    <br>
+    <input type="button" value="Kiểm tra" onclick="checktuoi()">
+    <p id="result1"></p>
+
+    <script>
+        function checktuoi() {
+            let tuoi = Number(document.getElementById("tuoi").value)
+        let result1
+        tuoi < 15? result1 = "Không đủ điều kiện vào lớp 10" : result1 = "Đủ điều kiện vào lớp 10"
+        
+        document.getElementById("result1").innerHTML = result1
+        }
+        
+
+
+    </script>  -->
+    <!-- Bài 3 -->
+
+    <!-- <script>
+        let number = parseInt(prompt("Nhập vào một số nguyên bất kì: ", ""))
+        switch(true) {
+            case number > 0: 
+                alert(number + " lớn hơn 0")
+                break
+            case number < 0:
+                alert(number + " nhỏ hơn 0")
+                break
+            default:
+                alert("Vui lòng nhập lại")
+                break
+
+        }
+
+         
+    </script> -->
+
+    <!-- Bài 4 -->
+    <h3> Tìm giá trị lớn nhất trong 3 số nguyên</h3>
+    <input type="text" name="" id="a"> <br>
+    <input type="text" name="" id="b"> <br>
+    <input type="text" name="" id="c"> <br> <br>
+    <input type="button" value="Kiểm tra" onclick="kiemtra2()">
+    <p id="result2"></p>
+     <script>
+        function kiemtra2() {
+            let a = Number(document.getElementById("a").value)
+            let b = Number(document.getElementById("b").value)
+            let c = Number(document.getElementById("c").value)
+
+            if (a > b) {
+                if(a > c) {
+                   document.getElementById("result2").innerHTML = a + " là số lớn nhất"
+                } else {
+                    document.getElementById("result2").innerHTML = c + " là số lớn nhất"
+                } 
+            } else if (b > c) {
+                document.getElementById("result2").innerHTML = b + " là số lớn nhất"
+            } else {
+                document.getElementById("result2").innerHTML = c + " là số lớn nhất"
+            }
+        }
+     </script>
+
+
+</body>
+</html>
