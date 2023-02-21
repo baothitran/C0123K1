@@ -1,9 +1,9 @@
-let matrix = [
-    [3,1,5,4],
-    [2,7,1,8],
-    [3,5,1,6],
-    [1,2,1,2]
-]
+// let matrix = [
+//     [3,1,5,4],
+//     [2,7,1,8],
+//     [3,5,1,6],
+//     [1,2,1,2]
+// ]
 
 // let sum = 0;
 // for(let i=0;i<matrix.length;i++){
@@ -53,13 +53,13 @@ let matrix = [
 // console.log(`${sum}`);
 
 // bài 1
-let sum1 = 0
-for (let i = 0; i < matrix.length; i++) {
-    for (j = 0; j < matrix[i].length - i; j++) {
-        sum1 += matrix[i][j]
-    }
-}
-console.log(`${sum1}`);
+// let sum1 = 0
+// for (let i = 0; i < matrix.length; i++) {
+//     for (j = 0; j < matrix[i].length - i; j++) {
+//         sum1 += matrix[i][j]
+//     }
+// }
+// console.log(`${sum1}`);
 
 // bài 03
 // let sumPrime = 0;
@@ -82,3 +82,17 @@ console.log(`${sum1}`);
 //      }
 //   }
 // console.log(`Tong cac so nguyen to: ${sumPrime}`);
+let matrix = [
+    [3,1,5,4],
+    [2,7,1,8],
+    [3,5,1,6],
+    [1,2,1,2]
+]
+for(let i=0;i<matrix.length;i++){
+    let str = "";
+    for(let j=0;j<matrix[i].length;j++){
+    //       str += matrix[i][j] + " ";
+            str = str + matrix[i][j] + " ";
+    }
+    console.log(str);
+}
