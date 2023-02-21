@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập 1</title>
+</head>
+
+<body>
+    <p>Bài 1</p>
+    <button onclick="bai_1()">Click me</button>
+    <p>Bài 2</p>
+    <button onclick="bai_2()">Click me</button>
+    <p>Bài 3</p>
+    <button onclick="bai_3()"></button>
+    <script>
+        function bai_1() {
+            for (i = 1; i <= 100; i++) {
+                document.write(i + "<br>")
+                if (i == 99) {
+                    alert("Đã hoàn thành")
+                }
+            }
+        }
+
+        function bai_2() {
+            let i = Number(prompt("Nhập nhiệt độ vào đây: "))
+            while (i < 20 || i > 100) {
+                if (i > 100) {
+                    alert("Nhiệt độ cao! Vui lòng giảm nhiệt độ.")
+                    i = Number(prompt("Nhập nhiệt độ vào đây: "))
+                } else if (i < 20) {
+                    alert("Nhập độ thấp! Vui lòng tăng nhiệt độ.")
+                    i = Number(prompt("Nhập nhiệt độ vào đây: "))
+                }
+            } alert("Nhiệt độ bình thường")
+        }
+
+        function bai_3() {
+            let F = "", F0 = 0, F1 = 1
+            let result= ""
+            for (let i = 0; i < 20; i++) {
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

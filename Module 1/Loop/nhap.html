@@ -4,52 +4,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luyện tập vòng lặp 01</title>
 </head>
 <body>
-    <input type="number" id="luong" placeholder="Nhập lương">
-    <button onclick="bacluong()">Kiểm tra</button>
-    <div id="result"></div>
+    <p>1.Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+    <input type="button" value="click" onclick="bai_1()"> <br>
+    <p>2.Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</p>
+    <input type="button" value="click" onclick="bai_2()"> <br>
+    <p>3.Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên..</p>
+    <input type="button" value="click" onclick="bai_3()"> <br>
+    <p>4.Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+    <input type="button" value="click" onclick="bai_4()"> <br>
+    <p>5.Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</p>
+    <input type="button" value="click" onclick="bai_5()"> <br>
+    <p>6.Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</p>
+    <input type="button" value="click" onclick="bai_6()"> <br>
+    <p>7.Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+    <input type="button" value="click" onclick="bai_7()"> <br>
+    <p>8.Bài 8: Game đoán số</p>
+    <input type="button" id="game" value="Chơi" onclick="bai_8()"> <br>
     <script>
-        function bacluong() {
-            let luong  = document.getElementById("luong").value;
-switch (true) {
-    case luong > 80: {
-        result = ("Bậc 7");
-        break;
-    }
-    case luong > 52: {
-        result = ("Bậc 6");
-        break;
-    }
-    case luong > 32: {
-        result = ("Bậc 5");
-        break;
-    }
-    case luong > 18: {
-        result = ("Bậc 4");
-        break;
-    }
-    case luong > 10: {
-        result = ("Bậc 3");
-        break;
-    }
-    case luong > 5: {
-        result = ("Bậc 2");
-        break;
-    }
-    case luong <= 5 && luong >= 0: {
-        result = ("Bậc 1");
-        break;
-    }
-    default:                {
-        result = ("Mời nhập lại");
-        break;
-    }  
-}  
-    document.getElementById("result").innerHTML = result ;
-}
-
+        function bai_1() {
+        for (let i = 1; i <= 100; i++) {
+            document.write(i + "<br>");
+            if (i == 99) {
+                alert("Đã hoàn thành");
+                }
+            }
+        }
+        function bai_2() {
+            let temp = Number(prompt("Enter your Temperature: "));
+            while (temp < 20 || temp > 100){
+                if (temp > 100) {
+                    alert ("So hot!!! Turn down temperature.");
+                    temp = Number(prompt("Enter your Temperature: "));
+                }else if (temp < 20) {
+                    alert ("So cool!!! Turn up temperature.");
+                    temp = Number(prompt("Enter your Temperature: "));
+                }
+            }alert ("Temperature is good");
+        }
+        function bai_3() {
+            let F = "", F0 = 0, F1 = 1; //F = F(i)
+            let result = "";
+            for (let i = 0; i < 20; i++) {
+                if (i == 0) {
+                    F = 1;
+                    result += F + " ";
+                }else if (i==1){
+                    F = 1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                }else {
+                    F = F0 + F1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                }
+            }document.write(result);
+        }
+        function bai_4() {
+            let F = "", F0 = 0, F1 = 1; //F = F(i): số fibonacci
+            let result = "";
+            let chiahet ="";
+            for (let i = 0; i < 20; i++) {
+                if (i == 0) {
+                    F = 1;
+                    result += F + " ";
+                }else if (i==1){
+                    F = 1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                }else {
+                    F = F0 + F1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                    if (F % 5 == 0) {
+                        chiahet = F;
+                        break;
+                    }
+                }                 
+            }document.write(chiahet);
+        }
+        function bai_5() {
+            let F = "", F0 = 0, F1 = 1; //F = F(i)
+            let result = ""; let sum = Number();
+            for (let i = 0; i < 20; i++) {
+                if (i == 0) {
+                    F = 1;
+                    result += F + " ";
+                }else if (i==1){
+                    F = 1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                }else {
+                    F = F0 + F1;
+                    F0 = F1;
+                    F1 = F;
+                    result += F + " ";
+                    sum += F;
+                }                
+            }
+            document.write("Đây là 20 số đầu tiên trong dãy Fibonacci: <br> " + result + "<br>"); 
+            document.write("Tổng = " +sum);
+        }
+        function bai_6() {
+            let sum = Number();
+            let chiahet = "";
+            let n = Number(); //n là số đếm số chia hết cho 7
+            for (let i = 0; i < 1000; i++) {               
+                    if (i % 7 !== 0) {
+                        continue;
+                    }
+                    n += 1;
+                    chiahet += i + " "; 
+                    sum += i;
+                    if (n == 30) {
+                        break;
+                    }
+            }document.write("30 số đầu tiên chia hết cho 7: <br>" + chiahet + "<br>");
+            document.write("Tổng = " +sum);
+        }
+        function bai_7() {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 == 0) {
+                    if (i % 5 == 0) {
+                    document.write("FizzBuzz <br>");
+                    } else document.write("Fizz <br>");
+                    continue;
+                }else if (i % 5 == 0) {
+                    document.write("Buzz <br>");
+                    continue;
+                }else 
+                document.write(i + "<br>");
+            }
+        }
+        function bai_8() {
+            let num = Number(prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?"));
+            let num2 = Number(prompt("Nhập số bạn đoán"));
+            let N = Math.floor(Math.random()*num);
+            let i = 0;
+            while (num2 != N) {
+                i++
+                if (i == 4) {
+                    alert("Bạn đã hết lượt chơi");
+                    break; 
+                }else if (num2 > N) {
+                    alert("Số bạn đoán lớn hơn");
+                    num2 = Number(prompt("Nhập số bạn đoán"));
+                }else if (num2 < N) {
+                    alert ("Số bạn đoán bé hơn");
+                    num2 = Number(prompt("Nhập số bạn đoán")); 
+                }
+            }
+            if (i == 4) {
+                document.write("Bạn đã hết lượt chơi");
+            }else document.write("Xin chúc mừng bạn đã đoán đúng");    
+        }
     </script>
 </body>
 </html>
