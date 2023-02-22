@@ -1,9 +1,4 @@
-// let matrix = [
-//     [3,1,5,4],
-//     [2,7,1,8],
-//     [3,5,1,6],
-//     [1,2,1,2]
-// ]
+
 
 // let sum = 0;
 // for(let i=0;i<matrix.length;i++){
@@ -61,7 +56,7 @@
 // }
 // console.log(`${sum1}`);
 
-// bài 03
+// bài 02
 // let sumPrime = 0;
 //   for(let i=0;i<matrix.length;i++){
 //      for(let j=0;j<matrix[i].length;j++){
@@ -88,11 +83,21 @@ let matrix = [
     [3,5,1,6],
     [1,2,1,2]
 ]
-for(let i=0;i<matrix.length;i++){
-    let str = "";
-    for(let j=0;j<matrix[i].length;j++){
-    //       str += matrix[i][j] + " ";
-            str = str + matrix[i][j] + " ";
+
+// bài 3: tổng tam giác dưới bên trái
+// let sum = 0
+// for (i = 0; i < matrix.length; i++) {
+//     for (j = 0; j < i + 1; j++) {
+//         sum += matrix[i][j]
+//     }
+// }
+// console.log(`${sum}`);
+
+// bài 4
+let sum = 0
+for (i = 0; i < matrix.length; i++) {
+    for (j = matrix[i].length-1; j >= matrix[i].length-1-i; j--) {
+        sum += matrix[i][j]
     }
-    console.log(str);
 }
+console.log(`${sum}`);

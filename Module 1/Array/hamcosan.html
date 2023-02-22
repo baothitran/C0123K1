@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <p> Bài 1</p>
+    <input type="button" value="click" onclick="bai1()"> <br>
+    <p> Bài 2</p>
+    <input type="button" value="click" onclick="bai2()"> <br>
+    <p> Bài 3</p>
+    <input type="button" value="click" onclick="bai3()"> <br>
+    <script>
+        function bai1() {
+            let myColor = ["Red", "Green", "White", "Black"]
+            
+            let array = myColor.toString()
+            document.write(array)
+        }
+        function bai2() {
+            let num = prompt("Enter your number:")
+            let array = num.toString()
+            let result = [array[0]]
+            for (let i =1; i < array.length; i++) {
+                if (array[i-1]%2 == 0 && array[i]%2 == 0) {
+                    result.push("-", array[i])
+                } else result.push(array[i])
+            } document.write(result.join(""))
+        }
+        function bai3() {
+            let str = prompt("Nhập chuỗi")
+            let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let LOWER = "abcdefghijklmnopqrstuvwxyz"
+            let result = []
+
+            for (let i = 0; i < str.length; i++) 
+            {
+                if(UPPER.indexOf(str(i)) !== -1) 
+                {
+                    result.push(str[i].toLowerCase())
+                }
+                else if (LOWER.indexOf(str[i]) !== -1) 
+                {
+                    result.push(str[i].toUpperCase())
+                }
+                else
+                {
+                    result.push(str[i])
+                }
+            }
+            document.write(result.join(''))
+        }
+        
+    </script>
+</body>
+</html>
