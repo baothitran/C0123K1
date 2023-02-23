@@ -31,27 +31,27 @@
             } document.write(result.join(""))
         }
         function bai3() {
-            let str = prompt("Nhập chuỗi")
-            let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            let LOWER = "abcdefghijklmnopqrstuvwxyz"
-            let result = []
+            let str = prompt("Nhập chuỗi");
+            let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let LOWER = "abcdefghijklmnopqrstuvwxyz";
+            let result = [];
 
-            for (let i = 0; i < str.length; i++) 
+            for (let i = 0; i<str.length; i++) 
             {
-                if(UPPER.indexOf(str(i)) !== -1) 
+                if(UPPER.indexOf(str[i]) !== -1) 
                 {
-                    result.push(str[i].toLowerCase())
+                    result.push(str[i].toLowerCase());
                 }
                 else if (LOWER.indexOf(str[i]) !== -1) 
                 {
-                    result.push(str[i].toUpperCase())
+                    result.push(str[i].toUpperCase());
                 }
                 else
                 {
-                    result.push(str[i])
+                    result.push(str[i]);
                 }
             }
-            document.write(result.join(''))
+            document.write(result.join(''));
         }
         
     </script>
