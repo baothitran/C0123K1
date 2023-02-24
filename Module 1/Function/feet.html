@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi feet - meters</title>
+</head>
+<body>
+    <script>
+        function footMeter(foot) {
+            let meter = 0.305*foot
+            return meter
+        }
+        function meterFoot(meter) {
+            let foot = 3.279*meter
+            return foot
+        }
+        let foot = prompt("Nhập foot:")
+        document.write(foot + " foot " + "= " + footMeter(foot) + " meter")
+        document.write("<br>")
+        let meter = prompt("Nhập meter:")
+        document.write(meter +" meter " + "= " + meterFoot(meter) + " foot")
+    </script>
+</body>
+</html>

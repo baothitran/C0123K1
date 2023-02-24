@@ -1,5 +1,5 @@
 
-let arr1 = [5,1,7,9,4,2]
+
 //bài 2
 // function printEven(arr) {
 //     for(i=0; i < arr.length; i++) {
@@ -23,26 +23,26 @@ let arr1 = [5,1,7,9,4,2]
 
 //bài 3
 // Hàm hiển thị các số nguyên tố của mảng;
-function displayPrime(arr) {
-    let display = ""
-    for(i=0; i<arr.length; i++) {
-        if(arr[i] < 1) {}
-        else {
-            let count = 0
-            for (let j=1; j<=arr[i]; j++) {
-                if (arr[i] %j == 0) {
-                    count += 1
-                }
-            }
-            if (count == 2) {
-                display += `${arr[i]} \n`
-            } else {}
-        }
-    }
-    return display
-}
-let prime = displayPrime(arr1)
-console.log(prime);
+// function displayPrime(arr) {
+//     let display = ""
+//     for(i=0; i<arr.length; i++) {
+//         if(arr[i] < 1) {}
+//         else {
+//             let count = 0
+//             for (let j=1; j<=arr[i]; j++) {
+//                 if (arr[i] %j == 0) {
+//                     count += 1
+//                 }
+//             }
+//             if (count == 2) {
+//                 display += `${arr[i]} \n`
+//             } else {}
+//         }
+//     }
+//     return display
+// }
+// let prime = displayPrime(arr1)
+// console.log(prime);
 //bài 4
 // function findMax(arr) {
 //     let max = arr[0]
@@ -55,6 +55,7 @@ console.log(prime);
 // }
 // let max1 = findMax(arr1)
 // console.log(max1);
+
 // bài 5
 // function findMin(arr) {
 //     let min = arr[0]
@@ -76,7 +77,16 @@ console.log(prime);
 // }
 // let link1 = linkArr(arr1,arr2)
 // console.log(link1);
-//bài 7
+// function concatArray(arr0, arr){
+//     for(let i=0;i<arr.length;i++){
+//         arr0.push(arr[i]);
+//     }
+//     return arr0;
+// }
+// let arrConnected = concatArray(arr1, arr2);
+// console.log(arrConnected);
+// console.log(arr1);
+// //bài 7
 // function reverseArr(arr) {
 //     for(i=0; i<arr.length/2; i++) {
 //         let temp = arr[i]
@@ -87,6 +97,7 @@ console.log(prime);
 // }
 // let reverse1 = reverseArr(arr1)
 // console.log(reverse1);
+
 //bài 8
 // function joinArr(arr) {
 //     let str =""
@@ -95,6 +106,19 @@ console.log(prime);
 // }
 // let join1= joinArr(arr1)
 // console.log(join1);
+let arr1 = [5,1,7,9,4,2]
+function joinElementsBySeparator(separator){
+    let str = "";
+    for(let i=0;i<arr1.length;i++){
+        str = str +  arr1[i];
+        if(i!=arr1.length-1){
+            str += separator;
+        }
+    }
+    return str ;
+}
+console.log(joinElementsBySeparator("*"));
+
 //bài 9
 // function displayPosition(num,arr) {
 //     let position = 0
@@ -115,6 +139,7 @@ console.log(prime);
 // }
 // let display1 = displayPosition(9,arr1)
 // console.log(display1);
+
 //bài 10
 // function pushArr(num,arr) {
 //     arr.push(num)
