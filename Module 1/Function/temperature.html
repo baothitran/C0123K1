@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <form action="">
+        <p>
+            <label for="">Fahrenheit</label>
+            <input type="number" placeholder="Fahrenheit" id="inputFahrenheit" oninput="tempConverter(this.value)" onchange="tempConverter(this.value)">
+        </p>
+        <p>Celsius: <span id="outputCel"></span></p>
+    </form>
+    <script>
+        function tempConverter(valNum) {
+            valNum = parseFloat(valNum)
+            document.getElementById("outputCel").innerHTML = (valNum - 32)
+        }
+    </script>
+</body>
+</html>
