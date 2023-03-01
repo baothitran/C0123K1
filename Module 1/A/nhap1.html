@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Employee Management</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="nhap1.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-div">
+            <div class="add-form">
+                <h3>ADD NEW EMPLOYEE</h3>
+                <div>
+                    <label for="name">Employee Name</label>
+                    <input type="text" name="" id="name" placeholder="Enter employee name here...">
+                </div>
+                <div>
+                    <label for="image">Image</label>
+                    <input type="url" name="" id="image" placeholder="Enter link here...">
+                </div>
+                <div>
+                    <label for="employeeid">Employee ID</label>
+                    <input type="number" name="" id="employeeid" placeholder="Enter employee id here...">
+                </div>
+                <div>
+                    <label for="organization">Organization</label>
+                    <select name="" id="organization"></select>
+                </div>
+                <div>
+                    <label for="position">Job Position</label>
+                    <select name="" id="position"></select>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" placeholder="Enter email here...">
+                </div>
+                <div class="left-btn-div">
+                    <div><button type="reset" id="btn-clear" onclick="resetAddform()">Clear</button></div>
+                    <div><button id="btn-add" onclick="add()">Add</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="tab-bar">
+                <h2>EMPLOYEE MANAGEMENT</h2>
+            </div>
+            <div class="employee-manager">
+                <div class=" btn-div">
+                    <div class="search-container">
+                        <input type="text" id="search" placeholder="Search" name="search" onchange="searchByName()">
+                        <button type="submit" onclick="searchByName()"><i
+                                class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right-btn">
+                        <button onclick="remove()"><i class="fa-solid fa-trash"></i> Delete</button>
+                        <button class="btn btn-secondary" onclick="displayCreateArea(this)"><i class="fa-solid fa-user-plus"></i>Add New</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<script src="nhap1.js"></script>
+</body>
+
+</html>

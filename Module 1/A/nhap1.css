@@ -1,0 +1,64 @@
+:root {
+    --darkblue: #001C44;
+    --blue: #0C5776;
+    --oceanblue: #2D99AE;
+    --lightblue: #BCFEFE;
+    --nudepink: #F8DAD0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.left-div{
+    flex-basis: 20%;
+
+    padding: 20px 20px;
+    height: 100vh;
+    display: block;
+    height: 110vh;
+    background: var(--darkblue);
+    color: lightcyan;
+    font-size: 15px;
+}
+
+.add-form {
+    font-size: 15px;
+}
+
+.add-form h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--lightblue) ;
+    font-size: 20px;
+}
+
+.add-form>div>input,
+.add-form>div>label,
+.add-form>div>select {
+    margin-bottom: 10px;
+}
+
+.add-form>div>input,
+.add-form>div>select {
+    width: 100%;
+    padding: 8px 8px;
+
+    border-radius: 5px;
+    border: 1px solid lightcyan;
+    background: none;
+    color: lightcyan ;
+    outline: none;
+}
+
+.main-content{
+    max-width: 100%;
+    flex-basis: 80%;
+}
