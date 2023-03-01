@@ -6,18 +6,20 @@
     --nudepink: #F8DAD0;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .container {
     display: flex;
 }
 
-.left-div{
+.left-div {
     flex-basis: 20%;
 
     padding: 20px 20px;
@@ -25,7 +27,7 @@
     display: block;
     height: 110vh;
     background: var(--darkblue);
-    color: lightcyan;
+    color: whitesmoke;
     font-size: 15px;
 }
 
@@ -36,7 +38,7 @@
 .add-form h3 {
     margin-top: 15px;
     margin-bottom: 15px;
-    color: var(--lightblue) ;
+    color: var(--lightblue);
     font-size: 20px;
 }
 
@@ -53,12 +55,12 @@
 
     border-radius: 5px;
     border: 1px solid lightcyan;
-    background: none;
-    color: lightcyan ;
+    background: whitesmoke;
+    color: gray;
     outline: none;
 }
 
-.main-content{
+.main-content {
     max-width: 100%;
     flex-basis: 80%;
 }
