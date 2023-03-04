@@ -238,7 +238,7 @@ function edit(productId) {
     document.querySelector('#image').value = product.image;
     document.querySelector('#quantity').value = product.quantity;
     document.querySelector('#weight').value = product.weight;
-    document.querySelector('#price').src = product.price;
+    document.querySelector('#price').value = product.price;
 
     document.querySelector('.btn-success').classList.add('d-none');
     document.querySelector('.btn-warning').classList.remove('d-none');
@@ -249,8 +249,8 @@ function updateProduct() {
     let productId = document.querySelector('#id').value;
     let product = products.find(function (product) {
         return product.id == productId;
-    })
-
+    }
+    )
     product.name = document.querySelector('#name').value;
     product.image = document.querySelector('#image').value;
     product.quantity = document.querySelector('#quantity').value;
@@ -269,7 +269,7 @@ function resetAddForm() {
     document.querySelector('#quantity').value = "";
     document.querySelector('#weight').value = "";
     document.querySelector('#price').value = "";
-    document.querySelector('#reviewAvatar').src = "https://toppng.com/uploads/preview/and-blank-effect-transparent-11546868080xgtiz6hxid.png";
+    document.querySelector('#reviewImage').src = "https://toppng.com/uploads/preview/and-blank-effect-transparent-11546868080xgtiz6hxid.png";
 
     document.querySelector('.btn-success').classList.remove('d-none');
     document.querySelector('.btn-warning').classList.add('d-none');
@@ -297,7 +297,7 @@ function sort(direction) {
 function start() {
     init();
     renderTable();
-    renderSearchList();
+    // renderSearchList();
 }
 start();
 

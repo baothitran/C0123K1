@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap" 
         rel="stylesheet">
     <title>Product Management</title>
-    <link rel="icon" href="https://img.freepik.com/free-vector/cute-unicorn-reading-book-rainbow-cartoon-icon-illustration_138676-2425.jpg?w=2000">
+    <link rel="icon" href="Images/icon.jpg">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -24,7 +24,7 @@
             <div class="add-form">
                 <h3>ADD NEW PRODUCT</h3>
                 <div class="product-image">
-                    <img id="reviewImage" src="https://toppng.com/uploads/preview/and-blank-effect-transparent-11546868080xgtiz6hxid.png" alt="">
+                    <img id="reviewImage" src="Images/noimage.png" alt="">
                 </div>
                 <!-- <div>
                     <label for="productid">Product ID</label>
@@ -33,6 +33,7 @@
                 <div>
                     <label for="name">Product Name</label>
                     <input type="text" name="" id="name" placeholder="Enter product name here...">
+                    <input type="hidden" id="id" value="0">
                 </div>
                 <div>
                     <label for="image">Image</label>
@@ -63,7 +64,7 @@
                     <label></label>
                     <button class="btn btn-success" onclick="add()">Add</button>
                     <button class="btn btn-warning d-none" onclick="updateProduct()">Update</button>
-                    <button class="btn btn-dark" onclick="resetAddForm()">Cancel</button>
+                    <button class="btn btn-dark" onclick="resetAddForm()">Clear</button>
                 </div>
                 
             </div>
