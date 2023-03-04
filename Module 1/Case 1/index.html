@@ -50,21 +50,21 @@
                     <label for="price">Price</label>
                     <input type="text" name="" id="price" placeholder="Enter price here...">
                 </div>
-                <div class="left-btn-div row">
+                <!-- <div class="left-btn-div row">
                     <input id="productUpdate" type="hidden" />
                     <button id="btn-add" onclick="add()">Add</button>
                     
                 </div>
                 <div class="left-btn-div row ">
-                        <button class="col-6 d-none" id ="btn-update" onclick="handleUpdate()">Update</button>
-                        <button  class="col-6 d-none" type="reset" id="btn-clear" onclick="resetAddform()">Clear</button>
-                </div>
-                <!-- <div class="form-group">
-                    <label></label>
-                    <input type="button" class="btn btn-success" value="Create" onclick="createStaff()">
-                    <input type="button" class="btn btn-warning d-none" value="Update" onclick="updateStaff()">
-                    <input type="button" class="btn btn-dark" value="Cancel" onclick="resetCreateForm()">
+                        <button class="col-6" id ="btn-update" onclick="handleUpdate()">Update</button>
+                        <button  class="col-6" type="reset" id="btn-clear" onclick="resetAddform()">Clear</button>
                 </div> -->
+                <div class="left-btn-div row ">
+                    <label></label>
+                    <button class="btn btn-success" onclick="add()">Add</button>
+                    <button class="btn btn-warning d-none" onclick="updateProduct()">Update</button>
+                    <button class="btn btn-dark" onclick="resetAddForm()">Cancel</button>
+                </div>
                 
             </div>
         </div>
