@@ -28,8 +28,6 @@
     font-size: 15px;
 }
 
-
-
 .product-image>img {
     display: block;
     margin-left: auto;
@@ -91,7 +89,7 @@
     border-radius: 15px;
     font-size: 15px;
     font-weight: bold;
-    padding: 7px 35px;
+    padding: 7px 32px;
 }
 
 .form-group{
@@ -103,12 +101,6 @@
     background-color: #333;
     color: white;
 }
-
-
-.col-6{
-    width: 50%;
-}
-
 
 .row>button:hover {
     background-color: #e49584;
@@ -208,18 +200,6 @@
     background-color: rgb(197, 117, 144);
 }
 
-/* .right-btn>button:last-of-type {
-    background-color: rgb(219, 209, 191);
-    color: black;
-    font-weight: bold;
-    border: none;
-    padding: 7px 13px;
-    border-radius: 5px;
-}
-
-.right-btn>button:last-of-type:hover {
-    background-color: rgb(191, 173, 140);
-} */
 .product-image-right img{
     display: block;
     transition: all 0.5s ease;
